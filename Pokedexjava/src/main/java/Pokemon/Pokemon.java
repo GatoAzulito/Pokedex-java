@@ -26,14 +26,15 @@ public class Pokemon {
         this.tipo2 = tipo2;
     }
    
-    public void info() {
-        info("ficha");
-    }
-
     public int getNum() {
         return num;
     }
-    
+    public String getNombre() {
+        return nombre;
+    }
+    public void info() {
+        info("ficha");
+    }
     public void info(String input) {
         String texto = switch (input) {
             case "ficha" -> {

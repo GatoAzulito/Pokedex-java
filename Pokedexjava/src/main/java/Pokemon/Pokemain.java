@@ -27,7 +27,7 @@ public class Pokemain {
         List<Pokemon> equipo = new ArrayList<>();
         equipo.add(pikachu);
         equipo.add(charizard);
-        System.out.println(equipo.size()); //Imprime 2
+        Utilidades.imprimir(equipo.size()); //Imprime 2
         
         equipo.get(0).info(); //Imprime ficha del primer add()
         
@@ -43,12 +43,14 @@ public class Pokemain {
         System.out.println(pokemap.size()); //Imprime 2
         pokemap.get(6).info(); //.info sobre el 6
         //Hay una forma segura de guardar valores con getOrDefault(clave, nombreobjeto);
-        System.out.println(pokemap.containsKey(1));
-        System.out.println(pokemap.containsValue(pikachu));
-        System.out.println( pokemap.isEmpty());
         pokemap.containsKey(1); //False,verifica si clave 1 existen en pokemap
         pokemap.containsValue(pikachu); //True, verifica si pikachu existen en pokemap
         pokemap.isEmpty(); //Si está vacío
+        
+        for (Pokemon p : pokemap.values()) {
+            p.info();
+            p.info("nombre");
+        }
         
         //.put(25, charizard) Reemplaza lo que ya habia en 25 y devuelve el valor anterior
         //.putIfAbsent(26, Raichu) Reemplaza solo si está vacío
